@@ -7,27 +7,17 @@ namespace NumberMultiplier
         static void Main(string[] args)
         {
             Console.WriteLine("Enter numbers separated by commas that you want multiplied");
-            var inputs = Console.ReadLine();
-            var inputList = inputs.Split(",");
-            foreach (var input in inputList)
-            try
-            {
-                var inputToNumbers = Int32.Parse(input);
-                // Console.WriteLine(inputToNumbers);
-                foreach (var num in inputToNumbers)
-                try
-                {
-                    var output = num * 
-                }
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("error");
-            }
-            Console.ReadLine();
+            var input = Console.ReadLine();
+            var inputs = input.Split(",");
+            var total = 1;
 
+            foreach (var num in inputs)
+            {
+                var number = Int32.Parse(num);
+                total = total * number;
+            }
 
-            // string[] inputList = Console.WriteLine(inputSplit);
+            Console.WriteLine(total);
             Console.ReadLine();
         }
     }
